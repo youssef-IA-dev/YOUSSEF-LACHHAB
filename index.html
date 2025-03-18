@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Youssef, Développeur Web et Étudiant en CPGE MPSI.">
     <title>Youssef Lachhab - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -15,14 +15,14 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: #f4f4f4;
-            color: #333;
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #fff;
             overflow-x: hidden;
         }
 
         header {
-            background: url('https://via.placeholder.com/1920x800.png?text=AI+Background') no-repeat center center/cover;
+            background: url('https://via.placeholder.com/1920x800.png?text=IA+Background') no-repeat center center/cover;
             height: 100vh;
             text-align: center;
             color: white;
@@ -34,7 +34,7 @@
         }
 
         header h1 {
-            font-size: 4.5em;
+            font-size: 4em;
             letter-spacing: 5px;
             margin-bottom: 20px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -46,21 +46,13 @@
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
         }
 
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-top: 20px;
-            border: 5px solid #4CAF50;
-        }
-
         nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px;
+            padding: 15px 0;
             z-index: 10;
             text-align: center;
         }
@@ -70,7 +62,7 @@
             text-decoration: none;
             font-size: 1.2em;
             margin: 0 20px;
-            padding: 10px;
+            padding: 10px 20px;
             border-radius: 5px;
             transition: all 0.3s ease;
         }
@@ -82,12 +74,8 @@
 
         section {
             padding: 60px 20px;
+            background-color: #1f1f1f;
             text-align: center;
-            display: none;
-        }
-
-        section.active {
-            display: block;
         }
 
         section h2 {
@@ -105,7 +93,6 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
             transition: all 0.3s ease;
-            color: white;
         }
 
         .card:hover {
@@ -158,155 +145,75 @@
             color: #4CAF50;
         }
 
-        .container {
-            width: 100%;
-            display: flex;
-            justify-content: space-evenly;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .item {
-            background: #fff;
-            padding: 30px;
-            width: 300px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            margin: 15px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .item h3 {
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        .item p {
-            font-size: 1.1em;
-            color: #777;
-        }
-
-        .item i {
-            font-size: 3em;
-            margin-bottom: 20px;
-            color: #4CAF50;
-        }
     </style>
 </head>
-
 <body>
 
     <header>
-        <img src="https://avatars.githubusercontent.com/u/203878137?v=4" alt="Youssef Lachhab" class="profile-img">
         <h1>Youssef Lachhab</h1>
         <p>Développeur Web & Étudiant en CPGE MPSI</p>
     </header>
 
     <nav>
-        <a href="javascript:void(0)" onclick="showSection('intro')">Introduction</a>
-        <a href="javascript:void(0)" onclick="showSection('certificats')">Certificats</a>
-        <a href="javascript:void(0)" onclick="showSection('competences')">Compétences</a>
-        <a href="javascript:void(0)" onclick="showSection('formations')">Formations</a>
-        <a href="javascript:void(0)" onclick="showSection('langues')">Langues</a>
-        <a href="javascript:void(0)" onclick="showSection('contact')">Contact</a>
+        <a href="#introduction">Introduction</a>
+        <a href="#competences">Compétences</a>
+        <a href="#certificats">Certificats</a>
+        <a href="#formations">Formations</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <section id="intro" class="active">
+    <section id="introduction">
         <h2>Introduction</h2>
-        <p>
-            Je suis Youssef Lachhab, un passionné de développement informatique et d'intelligence artificielle. Actuellement étudiant en CPGE MPSI, je développe des projets web et j'approfondis mes connaissances en programmation et en IA. Mon objectif est d'intégrer une grande école d'ingénierie pour contribuer à l'innovation technologique.
-        </p>
-    </section>
-
-    <section id="certificats">
-        <h2>Certificats</h2>
-        <div class="container">
-            <div class="item">
-                <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/python.jpg?raw=true" alt="Certificat Python Cursa">
-                <h3>Python Cursa</h3>
-                <p>Certificat de Python obtenu via la plateforme Cursa.</p>
-            </div>
-            <div class="item">
-                <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/python%20solo.jpg?raw=true" alt="Certificat Python SoloLearn">
-                <h3>Python SoloLearn</h3>
-                <p>Certificat de Python obtenu via la plateforme SoloLearn.</p>
-            </div>
-            <div class="item">
-                <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/html.jpg?raw=true" alt="Certificat HTML">
-                <h3>HTML SoloLearn</h3>
-                <p>Certificat en HTML obtenu via SoloLearn.</p>
-            </div>
-            <div class="item">
-                <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/participation.jpg?raw=true" alt="Certificat Microsoft Tech Day">
-                <h3>Microsoft Tech Day</h3>
-                <p>Certificat de participation à l'événement Microsoft Tech Day.</p>
-            </div>
-        </div>
+        <p>Je suis un passionné de la programmation, avec une expertise en développement web et une forte passion pour l'IA. Mon parcours m'a permis d'acquérir des compétences solides dans des technologies modernes. Je suis toujours à la recherche de nouveaux défis et je cherche à apporter des solutions innovantes aux problèmes complexes.</p>
     </section>
 
     <section id="competences">
-        <h2>Compétences</h2>
-        <div class="container">
-            <div class="item">
-                <i class="fas fa-code"></i>
-                <h3>Développement Web</h3>
-                <p>HTML, CSS, JavaScript, PHP</p>
-            </div>
-            <div class="item">
-                <i class="fas fa-cogs"></i>
-                <h3>Programmation</h3>
-                <p>Python, Java, C++</p>
-            </div>
-            <div class="item">
-                <i class="fas fa-brain"></i>
-                <h3>Intelligence Artificielle</h3>
-                <p>Apprentissage automatique, Deep Learning</p>
-            </div>
+        <h2>Mes Compétences</h2>
+        <p>Je maîtrise plusieurs langages de programmation tels que Python, JavaScript, HTML, CSS, et j'ai une expérience avec des frameworks comme React et Django. Je suis également passionné par l'intelligence artificielle et le machine learning, avec une bonne compréhension des algorithmes.</p>
+    </section>
+
+    <section id="certificats">
+        <h2>Mes Certificats</h2>
+        <div class="card">
+            <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/python.jpg?raw=true" alt="Certificat Python Cursa">
+            <h3>Certificat Python - Cursa</h3>
+            <p>Certificat obtenu après avoir suivi un cours intensif sur Python via la plateforme Cursa.</p>
+        </div>
+        <div class="card">
+            <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/python%20solo.jpg?raw=true" alt="Certificat Python SoloLearn">
+            <h3>Certificat Python - SoloLearn</h3>
+            <p>Certificat obtenu après avoir complété un cours Python sur la plateforme SoloLearn.</p>
+        </div>
+        <div class="card">
+            <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/html.jpg?raw=true" alt="Certificat HTML">
+            <h3>Certificat HTML - SoloLearn</h3>
+            <p>Certificat obtenu après avoir maîtrisé les bases du HTML sur SoloLearn.</p>
+        </div>
+        <div class="card">
+            <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/participation.jpg?raw=true" alt="Certificat Microsoft Tech Day">
+            <h3>Certificat Microsoft Tech Day</h3>
+            <p>Participation à l'événement Microsoft Tech Day 2025, enrichissant mes connaissances sur les technologies avancées.</p>
         </div>
     </section>
 
     <section id="formations">
-        <h2>Formations</h2>
-        <p>Je suis actuellement étudiant en première année de CPGE MPSI (Mathématiques, Physique et Sciences de l'Ingénieur) et je me spécialise en développement informatique et en intelligence artificielle. Mon but est de poursuivre mes études dans une grande école d'ingénierie.</p>
-    </section>
-
-    <section id="langues">
-        <h2>Langues</h2>
-        <p>Je parle couramment :</p>
-        <ul>
-            <li>Français (Langue Maternelle)</li>
-            <li>Anglais (Avancé)</li>
-        </ul>
+        <h2>Mes Formations</h2>
+        <p>Actuellement, je suis en première année de CPGE MPSI, où j'approfondis mes connaissances en mathématiques, physique et informatique. Cette formation m'aide à développer des compétences essentielles pour devenir un ingénieur innovant et performant.</p>
     </section>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Vous pouvez me contacter via les liens suivants :</p>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/youssef-lachhab-">Mon LinkedIn</a></li>
-            <li><a href="https://github.com/youssef-IA-dev">Mon GitHub</a></li>
-            <li><a href="mailto:youssefjava1python@gmail.com">Mon Email</a></li>
-        </ul>
+        <h2>Contactez-moi</h2>
+        <p>Je serais ravi de discuter de projets, collaborations, ou autres opportunités.</p>
+        <div class="social-icons">
+            <a href="https://github.com/youssef-IA-dev"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/youssef-lachhab-"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:youssefjava1python@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
     </section>
 
-    <footer class="footer">
-        <p>© 2025 Youssef Lachhab - Tous droits réservés</p>
-    </footer>
+    <div class="footer">
+        <p>&copy; 2025 Youssef Lachhab. Tous droits réservés.</p>
+    </div>
 
-    <script>
-        function showSection(id) {
-            var sections = document.querySelectorAll('section');
-            sections.forEach(function(section) {
-                section.classList.remove('active');
-            });
-            document.getElementById(id).classList.add('active');
-        }
-    </script>
 </body>
 </html>
