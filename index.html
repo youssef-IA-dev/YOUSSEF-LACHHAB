@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-        /* Reset de base */
         * {
             margin: 0;
             padding: 0;
@@ -18,12 +16,11 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: #f0f0f0;
+            background: #f4f4f4;
             color: #333;
             overflow-x: hidden;
         }
 
-        /* Header */
         header {
             background: url('https://via.placeholder.com/1920x800.png?text=AI+Background') no-repeat center center/cover;
             height: 100vh;
@@ -57,14 +54,13 @@
             border: 5px solid #4CAF50;
         }
 
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             background-color: rgba(0, 0, 0, 0.7);
-            padding: 15px 0;
+            padding: 10px;
             z-index: 10;
             text-align: center;
         }
@@ -74,7 +70,7 @@
             text-decoration: none;
             font-size: 1.2em;
             margin: 0 20px;
-            padding: 10px 20px;
+            padding: 10px;
             border-radius: 5px;
             transition: all 0.3s ease;
         }
@@ -84,7 +80,6 @@
             transform: scale(1.1);
         }
 
-        /* Sections */
         section {
             padding: 60px 20px;
             text-align: center;
@@ -136,7 +131,6 @@
             margin-top: 10px;
         }
 
-        /* Footer */
         .footer {
             background-color: #333;
             color: white;
@@ -164,7 +158,6 @@
             color: #4CAF50;
         }
 
-        /* New Section Styles */
         .container {
             width: 100%;
             display: flex;
@@ -292,4 +285,28 @@
         </ul>
     </section>
 
-    <section
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Vous pouvez me contacter via les liens suivants :</p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/youssef-lachhab-">Mon LinkedIn</a></li>
+            <li><a href="https://github.com/youssef-IA-dev">Mon GitHub</a></li>
+            <li><a href="mailto:youssefjava1python@gmail.com">Mon Email</a></li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Youssef Lachhab - Tous droits réservés</p>
+    </footer>
+
+    <script>
+        function showSection(id) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+</html>
