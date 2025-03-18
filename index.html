@@ -14,52 +14,66 @@
             color: #333;
         }
         header {
-            background-color: #007bff;
+            background-color: #4CAF50;
             color: white;
             text-align: center;
-            padding: 40px;
+            padding: 50px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         header h1 {
-            margin: 0;
             font-size: 2.5em;
+            margin: 0;
         }
         header p {
             font-size: 1.2em;
+            margin-top: 10px;
         }
         section {
-            padding: 20px;
-            margin: 20px;
+            padding: 40px 20px;
+            text-align: center;
         }
-        h2 {
-            color: #007bff;
+        section h2 {
             font-size: 2em;
+            color: #4CAF50;
+        }
+        section p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .projects, .experience, .education, .certificates {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .project-card, .experience-card, .education-card, .certificate-card {
+            background-color: #fff;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover, .experience-card:hover, .education-card:hover, .certificate-card:hover {
+            transform: translateY(-10px);
+        }
+        .project-card a, .experience-card a, .education-card a, .certificate-card a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .project-card a:hover, .experience-card a:hover, .education-card a:hover, .certificate-card a:hover {
+            text-decoration: underline;
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .bio {
-            background-color: #ffffff;
             padding: 20px;
-            margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .bio p {
-            font-size: 1.1em;
-            line-height: 1.6;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
@@ -68,15 +82,72 @@
         <h1>Bienvenue sur mon Portfolio</h1>
         <p>Je suis Youssef, Développeur Web et Étudiant en CPGE MPSI.</p>
     </header>
-    
-    <section class="bio">
+
+    <section>
         <h2>À propos de moi</h2>
-        <p>Je suis passionné par le développement web et la technologie. Actuellement étudiant en Mathématiques, Physique et Sciences de l'Ingénieur, je m'intéresse particulièrement à la programmation, à la création de sites web et à l'amélioration continue de mes compétences techniques.</p>
-        <p>Mon objectif est de rejoindre une grande école d'ingénieurs et de contribuer à des projets innovants en utilisant la technologie pour résoudre des problèmes complexes.</p>
+        <p>Je suis passionné par le développement web et les technologies modernes. Actuellement étudiant en CPGE MPSI, j'aime résoudre des problèmes complexes et créer des solutions efficaces. Voici quelques projets que j'ai réalisés.</p>
+    </section>
+
+    <section>
+        <h2>Mes Projets</h2>
+        <p>Découvrez mes projets sur GitHub.</p>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Individu et Communauté</h3>
+                <p>Un projet philosophique qui explore la relation entre l'individu et la société.</p>
+                <a href="https://github.com/youssef-IA-dev/Individu-et-Communaute" target="_blank">Voir le projet</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Mon Expérience</h2>
+        <div class="experience">
+            <div class="experience-card">
+                <h3>Développeur Web - Freelance</h3>
+                <p>Depuis 2023 - Création de sites web pour divers clients avec une forte orientation UX/UI.</p>
+            </div>
+            <div class="experience-card">
+                <h3>Assistant en Informatique - Université</h3>
+                <p>2022 - Aide à l'enseignement des concepts de programmation et de développement web.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Formation</h2>
+        <div class="education">
+            <div class="education-card">
+                <h3>CPGE MPSI</h3>
+                <p>2023 - 2025 - Préparation aux concours d'écoles d'ingénieurs, spécialisation en Mathématiques, Physique et Informatique.</p>
+            </div>
+            <div class="education-card">
+                <h3>Baccalauréat Scientifique</h3>
+                <p>2023 - Obtention du Bac avec mention Très Bien, spécialité Mathématiques.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Mes Certificats</h2>
+        <div class="certificates">
+            <div class="certificate-card">
+                <h3>Certificat Python - SoloLearn</h3>
+                <a href="https://www.sololearn.com/certificates/CT-12345678" target="_blank">Voir le certificat</a>
+            </div>
+            <div class="certificate-card">
+                <h3>Certificat HTML - SoloLearn</h3>
+                <a href="https://www.sololearn.com/certificates/CT-87654321" target="_blank">Voir le certificat</a>
+            </div>
+            <div class="certificate-card">
+                <h3>Certificat Python - Cursa</h3>
+                <a href="https://cursa.com/certificates/CT-11223344" target="_blank">Voir le certificat</a>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>Contactez-moi sur <a href="https://www.linkedin.com/in/youssef-lachhab-">LinkedIn</a></p>
+        <p>Contactez-moi sur <a href="https://www.linkedin.com/in/youssef-lachhab-" target="_blank" style="color: #fff; text-decoration: none;">LinkedIn</a></p>
     </footer>
 </body>
 </html>
