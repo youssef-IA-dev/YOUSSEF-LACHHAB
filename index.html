@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Youssef, Développeur Web et Étudiant en CPGE MPSI.">
+    <meta name="description" content="Portfolio de Youssef Lachhab, Développeur Web et Étudiant en CPGE MPSI.">
     <title>Youssef Lachhab - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-        /* Reset de base */
+        /* Reset */
         * {
             margin: 0;
             padding: 0;
@@ -22,8 +22,9 @@
             overflow-x: hidden;
         }
 
+        /* En-tête avec animation */
         header {
-            background: url('https://via.placeholder.com/1920x800.png?text=IA+Background') no-repeat center center/cover;
+            background: url('https://source.unsplash.com/1920x1080/?artificial-intelligence,technology') no-repeat center center/cover;
             height: 100vh;
             text-align: center;
             color: white;
@@ -32,6 +33,7 @@
             align-items: center;
             flex-direction: column;
             padding-top: 50px;
+            position: relative;
         }
 
         header h1 {
@@ -39,20 +41,18 @@
             letter-spacing: 5px;
             margin-bottom: 20px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-            animation: animateName 2s ease-in-out infinite;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #4CAF50; }
+            to { text-shadow: 0 0 20px #4CAF50, 0 0 30px #00ff00; }
         }
 
         header p {
             font-size: 1.5em;
             margin-bottom: 30px;
             text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Animation du nom */
-        @keyframes animateName {
-            0% { color: #4CAF50; }
-            50% { color: #f39c12; }
-            100% { color: #4CAF50; }
         }
 
         .profile-img {
@@ -63,6 +63,7 @@
             border: 5px solid #4CAF50;
         }
 
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -89,6 +90,7 @@
             transform: scale(1.1);
         }
 
+        /* Sections */
         section {
             padding: 60px 20px;
             background-color: #1f1f1f;
@@ -135,6 +137,7 @@
             margin-top: 10px;
         }
 
+        /* Pied de page */
         .footer {
             background-color: #333;
             color: white;
@@ -173,48 +176,33 @@
     </header>
 
     <nav>
-        <a href="#projets">Mes Projets</a>
         <a href="#certificats">Mes Certificats</a>
         <a href="#formations">Mes Formations</a>
         <a href="#evenements">Mes Événements</a>
     </nav>
 
-    <section id="projets">
-        <h2>Mes Projets</h2>
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="Projet 1">
-            <h3>Individu et Communauté</h3>
-            <p>Découvrez mon projet sur le thème de l'individu et de la communauté.</p>
-        </div>
-    </section>
-
     <section id="certificats">
         <h2>Mes Certificats</h2>
         <div class="card">
-            <img src="https://via.placeholder.com/150" alt="Certificat Python">
-            <h3>Certificat Python</h3>
-            <p>Obtenu sur SoloLearn</p>
+            <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/python.jpg?raw=true" alt="Certificat Python Cursa">
+            <h3>Certificat Python - Cursa</h3>
         </div>
         <div class="card">
-            <img src="https://via.placeholder.com/150" alt="Certificat HTML">
-            <h3>Certificat HTML</h3>
-            <p>Obtenu sur SoloLearn</p>
+            <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/python%20solo.jpg?raw=true" alt="Certificat Python SoloLearn">
+            <h3>Certificat Python - SoloLearn</h3>
         </div>
         <div class="card">
-            <img src="https://via.placeholder.com/150" alt="Certificat Microsoft Tech Day">
-            <h3>Certificat Microsoft Tech Day</h3>
-            <p>Participation à l'événement Microsoft Tech Day 2025</p>
+            <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/html.jpg?raw=true" alt="Certificat HTML">
+            <h3>Certificat HTML - SoloLearn</h3>
         </div>
-    </section>
-
-    <section id="formations">
-        <h2>Mes Formations</h2>
-        <p>Actuellement en première année de CPGE MPSI.</p>
     </section>
 
     <section id="evenements">
         <h2>Mes Événements</h2>
-        <p>J'ai assisté à des événements comme le <strong>Microsoft Tech Day</strong>.</p>
+        <div class="card">
+            <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/participation.jpg?raw=true" alt="Participation Microsoft Tech Day">
+            <h3>Participation - Microsoft Tech Day</h3>
+        </div>
     </section>
 
     <div class="footer">
@@ -226,4 +214,4 @@
     </div>
 
 </body>
-</html>
+</html> 
