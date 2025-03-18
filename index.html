@@ -4,76 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Youssef, Développeur Web et Étudiant en CPGE MPSI.">
-    <title>Youssef - Développeur Web</title>
+    <title>Youssef Lachhab - Développeur Web</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
         }
         header {
             background-color: #4CAF50;
             color: white;
+            padding: 20px;
             text-align: center;
-            padding: 50px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         header h1 {
-            font-size: 2.5em;
             margin: 0;
+            font-size: 2.5em;
         }
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        section h2 {
-            font-size: 2em;
-            color: #4CAF50;
-        }
-        section p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-        .projects, .experience, .education, .certificates {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .project-card, .experience-card, .education-card, .certificate-card {
-            background-color: #fff;
+        .container {
             padding: 20px;
-            width: 300px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            transition: transform 0.3s ease;
         }
-        .project-card:hover, .experience-card:hover, .education-card:hover, .certificate-card:hover {
-            transform: translateY(-10px);
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
         }
-        .project-card a, .experience-card a, .education-card a, .certificate-card a {
-            text-decoration: none;
-            color: #4CAF50;
-            font-size: 1.1em;
-            font-weight: bold;
+        .button-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin: 10px;
         }
-        .project-card a:hover, .experience-card a:hover, .education-card a:hover, .certificate-card a:hover {
-            text-decoration: underline;
+        .button-container button:hover {
+            background-color: #45a049;
+        }
+        .section {
+            display: none;
         }
         footer {
-            background-color: #333;
-            color: white;
             text-align: center;
             padding: 20px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            background-color: #333;
+            color: white;
+        }
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -83,71 +65,55 @@
         <p>Je suis Youssef, Développeur Web et Étudiant en CPGE MPSI.</p>
     </header>
 
-    <section>
-        <h2>À propos de moi</h2>
-        <p>Je suis passionné par le développement web et les technologies modernes. Actuellement étudiant en CPGE MPSI, j'aime résoudre des problèmes complexes et créer des solutions efficaces. Voici quelques projets que j'ai réalisés.</p>
-    </section>
-
-    <section>
-        <h2>Mes Projets</h2>
-        <p>Découvrez mes projets sur GitHub.</p>
-        <div class="projects">
-            <div class="project-card">
-                <h3>Individu et Communauté</h3>
-                <p>Un projet philosophique qui explore la relation entre l'individu et la société.</p>
-                <a href="https://github.com/youssef-IA-dev/Individu-et-Communaute" target="_blank">Voir le projet</a>
-            </div>
+    <div class="container">
+        <div class="button-container">
+            <button onclick="showSection('projets')">Mes Projets</button>
+            <button onclick="showSection('certificats')">Mes Certificats</button>
+            <button onclick="showSection('formations')">Mes Formations</button>
+            <button onclick="showSection('evenements')">Mes Événements</button>
         </div>
-    </section>
 
-    <section>
-        <h2>Mon Expérience</h2>
-        <div class="experience">
-            <div class="experience-card">
-                <h3>Développeur Web - Freelance</h3>
-                <p>Depuis 2023 - Création de sites web pour divers clients avec une forte orientation UX/UI.</p>
-            </div>
-            <div class="experience-card">
-                <h3>Assistant en Informatique - Université</h3>
-                <p>2022 - Aide à l'enseignement des concepts de programmation et de développement web.</p>
-            </div>
+        <div id="projets" class="section">
+            <h2>Mes Projets</h2>
+            <p>Voici quelques-uns de mes projets sur GitHub :</p>
+            <ul>
+                <li><a href="https://github.com/youssef-IA-dev/Individu-et-Communaute">Mon projet "Individu et Communauté"</a></li>
+            </ul>
         </div>
-    </section>
 
-    <section>
-        <h2>Formation</h2>
-        <div class="education">
-            <div class="education-card">
-                <h3>CPGE MPSI</h3>
-                <p>2023 - 2025 - Préparation aux concours d'écoles d'ingénieurs, spécialisation en Mathématiques, Physique et Informatique.</p>
-            </div>
-            <div class="education-card">
-                <h3>Baccalauréat Scientifique</h3>
-                <p>2023 - Obtention du Bac avec mention Très Bien, spécialité Mathématiques.</p>
-            </div>
+        <div id="certificats" class="section">
+            <h2>Mes Certificats</h2>
+            <p>Voici mes certificats obtenus :</p>
+            <ul>
+                <li>Python - SoloLearn</li>
+                <li>HTML - SoloLearn</li>
+                <li>Python - Cursa</li>
+            </ul>
         </div>
-    </section>
 
-    <section>
-        <h2>Mes Certificats</h2>
-        <div class="certificates">
-            <div class="certificate-card">
-                <h3>Certificat Python - SoloLearn</h3>
-                <a href="https://www.sololearn.com/certificates/CT-12345678" target="_blank">Voir le certificat</a>
-            </div>
-            <div class="certificate-card">
-                <h3>Certificat HTML - SoloLearn</h3>
-                <a href="https://www.sololearn.com/certificates/CT-87654321" target="_blank">Voir le certificat</a>
-            </div>
-            <div class="certificate-card">
-                <h3>Certificat Python - Cursa</h3>
-                <a href="https://cursa.com/certificates/CT-11223344" target="_blank">Voir le certificat</a>
-            </div>
+        <div id="formations" class="section">
+            <h2>Mes Formations</h2>
+            <p>Je suis actuellement en première année de CPGE MPSI (Mathématiques, Physique, et Sciences de l'Ingénieur).</p>
         </div>
-    </section>
+
+        <div id="evenements" class="section">
+            <h2>Mes Événements</h2>
+            <p>J'ai assisté à des événements comme le Microsoft Tech Day.</p>
+        </div>
+    </div>
 
     <footer>
-        <p>Contactez-moi sur <a href="https://www.linkedin.com/in/youssef-lachhab-" target="_blank" style="color: #fff; text-decoration: none;">LinkedIn</a></p>
+        <p>Contactez-moi sur <a href="https://www.linkedin.com/in/youssef-lachhab-">LinkedIn</a></p>
     </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
