@@ -29,6 +29,8 @@
         .footer a:hover { text-decoration: underline; }
         .social-icons a { font-size: 2em; color: white; margin: 0 20px; transition: all 0.3s ease; }
         .social-icons a:hover { color: #4CAF50; }
+        .back-to-top { position: fixed; bottom: 20px; right: 20px; background-color: #4CAF50; color: white; border: none; padding: 15px 20px; border-radius: 50%; cursor: pointer; display: none; }
+        .back-to-top:hover { background-color: #45a049; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         @keyframes slideIn { from { transform: translateX(-100%); } to { transform: translateX(0); } }
     </style>
@@ -97,6 +99,22 @@
             <a href="https://www.linkedin.com/in/youssef-lachhab-"><i class="fab fa-linkedin"></i></a>
         </div>
     </div>
+
+    <button class="back-to-top" id="back-to-top">↑</button>
+
+    <script>
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 200) {
+                document.getElementById('back-to-top').style.display = 'block';
+            } else {
+                document.getElementById('back-to-top').style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
 </html>
