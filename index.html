@@ -52,6 +52,7 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            z-index: 1000;
         }
         nav button {
             background: none;
@@ -76,6 +77,11 @@
         }
         .section h2 {
             color: cyan;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
         }
     </style>
 </head>
@@ -102,63 +108,4 @@
 </section>
 
 <section id="certificats" class="section">
-    <h2>Mes Certificats</h2>
-    <div>
-        <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/python.jpg?raw=true" width="200">
-        <p>Python - Cursa</p>
-    </div>
-    <div>
-        <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/python%20solo.jpg?raw=true" width="200">
-        <p>Python - SoloLearn</p>
-    </div>
-    <div>
-        <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/html.jpg?raw=true" width="200">
-        <p>HTML - SoloLearn</p>
-    </div>
-    <div>
-        <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/participation.jpg?raw=true" width="200">
-        <p>Participation Microsoft Tech Day</p>
-    </div>
-</section>
-
-<section id="competences" class="section">
-    <h2>Mes Compétences</h2>
-    <ul>
-        <li>Programmation en Python, HTML, CSS</li>
-        <li>Développement Web</li>
-        <li>Intelligence Artificielle et Machine Learning</li>
-    </ul>
-</section>
-
-<section id="formations" class="section">
-    <h2>Mes Formations</h2>
-    <p>Actuellement en première année de CPGE MPSI, où j'étudie les mathématiques, la physique et l'informatique.</p>
-</section>
-
-<section id="langues" class="section">
-    <h2>Les Langues</h2>
-    <ul>
-        <li>Français - Courant</li>
-        <li>Anglais - Avancé</li>
-        <li>Arabe - Langue maternelle</li>
-    </ul>
-</section>
-
-<section id="contact" class="section">
-    <h2>Me Contacter</h2>
-    <p>Email : youssefjava1python@gmail.com</p>
-    <p>LinkedIn : <a href="https://www.linkedin.com/in/youssef-lachhab-" target="_blank">Mon profil</a></p>
-    <p>GitHub : <a href="https://github.com/youssef-IA-dev" target="_blank">Mon GitHub</a></p>
-</section>
-
-<script>
-    function showSection(id) {
-        document.querySelectorAll('.section').forEach(section => {
-            section.style.display = 'none';
-        });
-        document.getElementById(id).style.display = 'block';
-    }
-</script>
-
-</body>
-</html>
+    <h2>Mes Certific
