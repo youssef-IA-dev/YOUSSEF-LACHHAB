@@ -119,11 +119,13 @@
             opacity: 0;
             transform: translateY(50px);
             transition: all 0.8s ease-out;
+            display: none; /* Cacher par défaut */
         }
 
         section.visible {
             opacity: 1;
             transform: translateY(0);
+            display: block; /* Afficher quand visible */
         }
 
         h2 {
@@ -132,15 +134,15 @@
             margin-bottom: 10px;
         }
 
-        /* Services */
-        .services {
+        /* Compétences */
+        .competences {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 20px;
         }
 
-        .service-card {
+        .competence-card {
             background: #fff;
             width: 250px;
             padding: 20px;
@@ -149,11 +151,11 @@
             transition: transform 0.3s;
         }
 
-        .service-card:hover {
+        .competence-card:hover {
             transform: scale(1.05);
         }
 
-        .service-card i {
+        .competence-card i {
             font-size: 40px;
             color: #4CAF50;
             margin-bottom: 10px;
@@ -195,7 +197,7 @@
                 width: 90%;
             }
 
-            .service-card {
+            .competence-card {
                 width: 100%;
             }
 
@@ -210,7 +212,7 @@
     <div class="navbar">
         <a href="#a-propos"><i class="fa-solid fa-user"></i> À propos</a>
         <a href="#competences"><i class="fa-solid fa-laptop-code"></i> Compétences</a>
-        <a href="#services"><i class="fa-solid fa-briefcase"></i> Services</a>
+        <a href="#contact"><i class="fa-solid fa-envelope"></i> Contactez-moi</a>
         <a href="#certificats"><i class="fa-solid fa-certificate"></i> Certificats</a>
     </div>
 
@@ -220,6 +222,10 @@
         <img src="https://avatars.githubusercontent.com/u/203878137?v=4" alt="Youssef Lachhab" class="profile-img">
         <h1>Youssef Lachhab</h1>
         <p>Développeur Web | Étudiant en CPGE MPSI | Passionné de technologie</p>
+        <div class="buttons">
+            <a href="https://www.linkedin.com/in/votre-profil" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/votre-profil" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        </div>
     </div>
 
     <section id="a-propos">
@@ -227,15 +233,15 @@
         <p>Je suis un étudiant en CPGE MPSI passionné par la programmation et l'IA...</p>
     </section>
 
-    <section id="services">
-        <h2>Mes Services</h2>
-        <div class="services">
-            <div class="service-card">
+    <section id="competences">
+        <h2>Mes Compétences</h2>
+        <div class="competences">
+            <div class="competence-card">
                 <i class="fa-solid fa-code"></i>
                 <h3>Développement Web</h3>
                 <p>Création de sites web dynamiques et optimisés.</p>
             </div>
-            <div class="service-card">
+            <div class="competence-card">
                 <i class="fa-solid fa-brain"></i>
                 <h3>IA & Algorithmes</h3>
                 <p>Conception d'algorithmes et applications IA.</p>
@@ -269,14 +275,34 @@
         </div>
     </section>
 
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <p>Pour toute question ou collaboration, n'hésitez pas à me contacter via mes réseaux sociaux ou par email.</p>
+        <p>Email: <a href="mailto:votre-email@example.com">votre-email@example.com</a></p>
+    </section>
+
     <script>
-        document.addEventListener("scroll", function () {
-            document.querySelectorAll("section").forEach((section) => {
-                if (section.getBoundingClientRect().top < window.innerHeight - 100) {
-                    section.classList.add("visible");
+        // Fonction pour afficher la section correspondante au bouton cliqué
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                
+                // Cacher toutes les sections
+                document.querySelectorAll('section').forEach(section => {
+                    section.classList.remove('visible');
+                });
+
+                // Afficher la section ciblée
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.classList.add('visible');
                 }
             });
         });
+
+        // Afficher la première section par défaut
+        document.querySelector('#a-propos').classList.add('visible');
     </script>
 
     <footer class="footer">
