@@ -61,7 +61,7 @@
         /* Carte centrale */
         .portfolio-card {
             background: white;
-            width: 50%;
+            width: 90%;
             max-width: 500px;
             margin: -80px auto 20px;
             padding: 20px;
@@ -167,11 +167,18 @@
             gap: 20px;
         }
 
+        .certificat {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
         .certificat img {
             width: 100%;
-            height: 150px;
+            height: auto;
             object-fit: cover;
-            border-radius: 10px;
         }
 
         /* Footer */
@@ -180,6 +187,21 @@
             color: white;
             padding: 20px;
             margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .portfolio-card {
+                width: 90%;
+            }
+
+            .service-card {
+                width: 100%;
+            }
+
+            .certificat {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -223,25 +245,27 @@
 
     <section id="certificats">
         <h2>Mes Certificats</h2>
-       <div class="card">
-            <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/python.jpg?raw=true" alt="Certificat Python Cursa">
-            <h3>Certificat Python Cursa</h3>
-            <p>Ce certificat reflète ma maîtrise du langage Python, obtenue grâce à une formation complète sur Cursa. Il valide mes compétences pour le développement de solutions logicielles efficaces et évolutives.</p>
-        </div>
-        <div class="card">
-            <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/python%20solo.jpg?raw=true" alt="Certificat Python SoloLearn">
-            <h3>Certificat Python SoloLearn</h3>
-            <p>Sur la plateforme SoloLearn, j'ai acquis des compétences avancées en Python, avec une approche interactive et pratique pour résoudre des problèmes en programmation et développement logiciel.</p>
-        </div>
-        <div class="card">
-            <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/html.jpg?raw=true" alt="Certificat HTML">
-            <h3>Certificat HTML</h3>
-            <p>Ce certificat atteste de ma compétence en HTML, un langage fondamental pour le développement web. Je maîtrise la structure des pages web et la création de contenu interactif.</p>
-        </div>
-        <div class="card">
-            <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/participation.jpg?raw=true" alt="Participation Microsoft Tech Day">
-            <h3>Certificat Microsoft Tech Day</h3>
-            <p>Lors de ma participation à l'événement Microsoft Tech Day, j'ai approfondi mes connaissances des technologies émergentes et des solutions Microsoft, renforçant ainsi mes compétences techniques.</p>
+        <div class="certificat-container">
+            <div class="certificat">
+                <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/python.jpg?raw=true" alt="Certificat Python Cursa">
+                <h3>Certificat Python Cursa</h3>
+                <p>Ce certificat reflète ma maîtrise du langage Python, obtenue grâce à une formation complète sur Cursa. Il valide mes compétences pour le développement de solutions logicielles efficaces et évolutives.</p>
+            </div>
+            <div class="certificat">
+                <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/python%20solo.jpg?raw=true" alt="Certificat Python SoloLearn">
+                <h3>Certificat Python SoloLearn</h3>
+                <p>Sur la plateforme SoloLearn, j'ai acquis des compétences avancées en Python, avec une approche interactive et pratique pour résoudre des problèmes en programmation et développement logiciel.</p>
+            </div>
+            <div class="certificat">
+                <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/html.jpg?raw=true" alt="Certificat HTML">
+                <h3>Certificat HTML</h3>
+                <p>Ce certificat atteste de ma compétence en HTML, un langage fondamental pour le développement web. Je maîtrise la structure des pages web et la création de contenu interactif.</p>
+            </div>
+            <div class="certificat">
+                <img src="https://github.com/youssef-IA-dev/YOUSSEF-LACHHAB/blob/main/participation.jpg?raw=true" alt="Participation Microsoft Tech Day">
+                <h3>Certificat Microsoft Tech Day</h3>
+                <p>Lors de ma participation à l'événement Microsoft Tech Day, j'ai approfondi mes connaissances des technologies émergentes et des solutions Microsoft, renforçant ainsi mes compétences techniques.</p>
+            </div>
         </div>
     </section>
 
@@ -254,6 +278,10 @@
             });
         });
     </script>
+
+    <footer class="footer">
+        <p>&copy; 2023 Youssef Lachhab. Tous droits réservés.</p>
+    </footer>
 
 </body>
 </html>
